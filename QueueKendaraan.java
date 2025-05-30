@@ -16,6 +16,22 @@ public class QueueKendaraan {
         return size == antrian.length;
     }
 
+    public Kendaraan cariKendaraan(String platNomor) {
+        if (isEmpty()) {
+            return null;
+        }
+        int i = front;
+        int count = 0;
+        while (count < size) {
+            if (antrian[i].platNomor.equalsIgnoreCase(platNomor)) {
+                return antrian[i];
+            }
+            i = (i + 1) % antrian.length;
+            count++;
+        }
+        return null;
+    }
+
     public void tambahAntrian(Kendaraan k) {
         if (isFull()) {
             System.out.println("Antrian Penuh!");

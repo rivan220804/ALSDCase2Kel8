@@ -19,5 +19,6 @@ public class TransaksiPengisian {
         System.out.println("Harga/liter  : " + bbm.hargaPerLiter);
         System.out.println("Jumlah Liter : " + liter);
         System.out.println("Total Bayar  : " + totalBayar);
+        System.out.println("");
     }
 }

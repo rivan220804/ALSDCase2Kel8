@@ -24,8 +24,10 @@ public class Main {
                     String plat = sc.nextLine();
                     System.out.print("Masukkan Jenis Kendaraan  : ");
                     String jenis = sc.nextLine();
-                    System.out.println("Masukkan Merk Kendaraan : ");
+                    System.out.print("Masukkan Merk Kendaraan : ");
                     String merk = sc.nextLine();
+                    Kendaraan k = new Kendaraan(plat, jenis, merk);
+                    queue.tambahAntrian(k);
                     break;
 
                 case 2:
@@ -37,6 +39,22 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.print("Masukkan nomor plat yang ingin dilayani: ");
+                    String platDilayani = sc.nextLine();
+                    Kendaraan dilayani = queue.cariKendaraan(platDilayani);
+                    if (dilayani != null) {
+                        System.out.print("Nama BBM        : ");
+                        String namaBBM = sc.nextLine();
+                        System.out.print("Harga per Liter : ");
+                        double harga = sc.nextDouble();
+                        System.out.print("Jumlah Liter    : ");
+                        double liter = sc.nextDouble();
+                        sc.nextLine();
+
+                        BBM bbm = new BBM(namaBBM, harga);
+                        TransaksiPengisian t = new TransaksiPengisian(dilayani, bbm, liter);
+                        transaksiList.tambah(t);
+                    }
                     break;
 
                 case 5:
