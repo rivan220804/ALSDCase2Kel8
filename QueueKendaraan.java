@@ -65,13 +65,12 @@ public class QueueKendaraan {
             System.out.println("Antrian Kosong!");
             return;
         }
-        int i = front;
-        System.out.println("");
-        for (int count = 0; count < size; count++) {
-            System.out.println( (count + 1) + ". Plat Nomor: " + antrian[i].platNomor);
-            System.out.println(" Tipe: " + antrian[i].tipe);
-            System.out.println(" Merk : " + antrian[i].merk);
-            i = (i + 1) % antrian.length;
+         System.out.println("");
+        for (int i = 0; i < size; i++) {
+            System.out.println( (i + 1) + ". Plat Nomor: " + antrian[i].platNomor);
+            int index = (front + i) % antrian.length;
+            System.out.println("   Tipe   : " + antrian[i].tipe);
+            System.out.println("   Merk   : " + antrian[i].merk);
         }
     }
 
