@@ -55,6 +55,7 @@ public class Main {
                         BBM bbm = new BBM(namaBBM, harga);
                         TransaksiPengisian t = new TransaksiPengisian(dilayani, bbm, liter);
                         transaksiList.tambah(t);
+                        System.out.println(">> Transaksi Berhasil dicatat.");
                     }
                     break;
 
