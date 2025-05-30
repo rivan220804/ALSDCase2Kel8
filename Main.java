@@ -20,14 +20,15 @@ public class Main {
 
             switch (pilih) {
                 case 1:
-                    System.out.print("Masukkan Plat Nomor       : ");
+                     System.out.print("Masukkan Plat Nomor       : ");
                     String plat = sc.nextLine();
                     System.out.print("Masukkan Jenis Kendaraan  : ");
                     String jenis = sc.nextLine();
-                    System.out.print("Masukkan Merk Kendaraan : ");
+                    System.out.println("Masukkan Merk Kendaraan : ");
                     String merk = sc.nextLine();
-                    Kendaraan k = new Kendaraan(plat, jenis, merk);
-                    queue.tambahAntrian(k);
+                    Kendaraan kendaraan = new Kendaraan(plat, jenis, merk);
+                    queue.tambahAntrian(kendaraan);
+                    System.out.println(">> Kendaraan masuk ke dalam antrian.");
                     break;
 
                 case 2:
