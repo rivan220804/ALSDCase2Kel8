@@ -18,11 +18,11 @@ public class Main {
 
             switch (pilih) {
                 case 1:
-                    System.out.print("Masukkan Plat Nomor: ");
+                    System.out.print("Masukkan Plat Nomor       : ");
                     String plat = sc.nextLine();
-                    System.out.print("Masukkan Jenis Kendaraan: ");
+                    System.out.print("Masukkan Jenis Kendaraan  : ");
                     String jenis = sc.nextLine();
-                    System.out.println("Masukkan Merk Kendaraan: ");
+                    System.out.println("Masukkan Merk Kendaraan : ");
                     String merk = sc.nextLine();
                     break;
 
