@@ -24,7 +24,7 @@ public class Main {
                     String plat = sc.nextLine();
                     System.out.print("Masukkan Jenis Kendaraan  : ");
                     String jenis = sc.nextLine();
-                    System.out.println("Masukkan Merk Kendaraan : ");
+                    System.out.print("Masukkan Merk Kendaraan : ");
                     String merk = sc.nextLine();
                     Kendaraan kendaraan = new Kendaraan(plat, jenis, merk);
                     queue.tambahAntrian(kendaraan);
