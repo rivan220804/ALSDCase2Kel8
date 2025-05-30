@@ -19,6 +19,7 @@ public class QueueKendaraan {
     public void tambahAntrian(Kendaraan k) {
         if (isFull()) {
             System.out.println("Antrian Penuh!");
+            return;
         }
         if (isEmpty()) {
             front = rear = 0;
@@ -27,6 +28,20 @@ public class QueueKendaraan {
         }
         antrian[rear] = k;
         size++;
+    }
+
+    public Kendaraan dequeue() {
+        if (isEmpty()) {
+            System.out.println("Antrian kosong!");
+            return null;
+        }
+        Kendaraan keluar = antrian[front];
+        front = (front + 1) % antrian.length;
+        size--;
+        if (size == 0) {
+            front = rear = -1;
+        }
+        return keluar;
     }
 
     public void tampilAntrian() {
