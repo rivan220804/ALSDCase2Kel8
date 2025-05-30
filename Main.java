@@ -3,8 +3,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         QueueKendaraan queue = new QueueKendaraan(10);
+        LinkedListTransaksi transaksiList = new LinkedListTransaksi();
 
-         int pilih;
+        int pilih;
         do {
             System.out.println("\n===== MENU SPBU =====");
             System.out.println("1. Tambah Antrian Kendaraan");
@@ -28,19 +29,19 @@ public class Main {
                     break;
 
                 case 2:
-                Kendaraan antrian = queue.tampilAntrian();
-                    System.out.println("---- Antrian Kendaraan ----");
-                    System.out.println("Antrian Kendaraan : ");
-                    antrian.tampilAntrian();
+                    queue.tampilAntrian();
                     break;
 
                 case 3:
+                    System.out.println("Jumlah kendaraan dalam antrian: " + queue.getSize());
                     break;
 
                 case 4:
                     break;
 
                 case 5:
+                    System.out.println("==== Riwayat Transaksi ====");
+                    transaksiList.tampilkan();
                     break;
 
                 case 0:
