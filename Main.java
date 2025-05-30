@@ -1,8 +1,9 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        QueueKendaraan queue = new QueueKendaraan(10);
+
          int pilih;
         do {
             System.out.println("\n===== MENU SPBU =====");
@@ -12,7 +13,7 @@ public class Main {
             System.out.println("4. Layani Kendaraan");
             System.out.println("5. Tampilkan Riwayat Transaksi");
             System.out.println("0. Keluar");
-            System.out.print("Pilih menu: ");
+            System.out.print("Pilih menu    : ");
             pilih = sc.nextInt();
             sc.nextLine(); 
 
@@ -27,6 +28,10 @@ public class Main {
                     break;
 
                 case 2:
+                Kendaraan antrian = queue.tampilAntrian();
+                    System.out.println("---- Antrian Kendaraan ----");
+                    System.out.println("Antrian Kendaraan : ");
+                    antrian.tampilAntrian();
                     break;
 
                 case 3:

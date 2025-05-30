@@ -1,8 +1,8 @@
-public class QueuKendaraan {
+public class QueueKendaraan {
     Kendaraan[] antrian;
     int front, rear, size;
 
-    public QueuKendaraan(int kapasitas) {
+    public QueueKendaraan(int kapasitas) {
         antrian = new Kendaraan[kapasitas];
         front = rear = -1;
         size = 0;
